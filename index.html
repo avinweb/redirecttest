@@ -51,7 +51,7 @@
 				<span class="tablet">
 					Coming soon to tablets.
 				</span><br/>
-				<a class="android-link" href="https://go.onelink.me/1122185275?pid=LandingPage&c=DirectNavigation_Dec15&af_sub1=Internal&af_sub2=DirectNavigation_Product_Iris&af_sub3=Web_Originated">Get the App</a>
+				<a class="android-link" style="display:inline-block !important;" href="https://go.onelink.me/1122185275?pid=LandingPage&c=DirectNavigation_Dec15&af_sub1=Internal&af_sub2=DirectNavigation_Product_Iris&af_sub3=Web_Originated">Get the App</a>
 			</p>
 		</div>
 	</div>
@@ -65,9 +65,10 @@
     		    androidTablet: ua.match(/Android/i) && !ua.match(/Mobile/i),
     		    android: ua.match(/Android/i) && ua.match(/Mobile/i)
         	}
-	    if (checker.android) {
-	    	window.location.replace(redirectUrl);
-	    }
+    	    if (checker.android) {
+    	    	window.location.replace(redirectUrl);
+
+    	    }
             if (checker.iphone) {
                 document.body.className += " temp android iphone";
                 window.location.replace(redirectUrl);
