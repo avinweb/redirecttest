@@ -65,7 +65,9 @@
     		    androidTablet: ua.match(/Android/i) && !ua.match(/Mobile/i),
     		    android: ua.match(/Android/i) && ua.match(/Mobile/i)
         	}
-
+	    if (checker.android) {
+	    	window.location.replace(redirectUrl);
+	    }
             if (checker.iphone) {
                 document.body.className += " temp android iphone";
                 window.location.replace(redirectUrl);
