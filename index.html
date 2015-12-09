@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://messenger.yahoo.com/stylesheets/mobile.css" />
+    <title>Yahoo Messenger</title>
+
+    <meta name="description" content="Share photos instantly, send GIFs and even unsend messages. It’s the fastest way to keep in touch with friends.">
+    <meta property="og:title" itemprop="name" content="The new Yahoo Messenger">
+    <meta property="og:description" itemprop="description" content="Share photos instantly, send GIFs and even unsend messages. It’s the fastest way to keep in touch with friends.">
+    <meta property="og:image" content="https://messenger.yahoo.com/App-icon-graphic2.jpg">
+    <link itemprop="image" href="https://messenger.yahoo.com/App-icon-graphic2.jpg">
+    <meta property="og:url" content="https://messenger.yahoo.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Yahoo Messenger">
+</head>
+<body>
+	<div class="temp-msg">
+		<div class="temp-msg-wrap">
+			<div class="logo">
+				<img src="assets/images/icon-for-mobile-small.png" alt="Yahoo Messenger" width="100%"/>
+			</div>
+			<h3>Redirecting to the App Store <span>.</span><span>.</span><span>.</span></h3>
+		</div>
+	</div>
+	<div id="container" class="container">
+		<div class="content">
+			<div class="logo">
+				<img src="assets/images/icon-for-mobile-small.png" alt="Yahoo Messenger" width="100%"/>
+			</div>
+			<p>Share photos instantly, send GIFs<br/>and even unsend messages.</p>
+			<p>
+				<span class="tablet">
+					Available on iPhone, Android phone and your<br/>computer at messenger.yahoo.com.
+				</span>
+				<span class="phone">
+					Go to <strong><a href="https://messenger.yahoo.com" target="_blank">messenger.yahoo.com</a></strong> on<br/>
+					your computer to start chatting.
+				</span>
+			</p>
+			<div class="devices">
+				<img class="phone" src="assets/images/mobile-page-phone-device-small.png" width="100%" alt=""/>
+				<div class="tablet" ></div>
+			</div>
+			<p class="bold">
+				<span class="phone">
+					Also available on iPhone<br/>and Android.
+				</span>
+				<span class="tablet">
+					Coming soon to tablets.
+				</span><br/>
+				<a class="android-link" href="https://go.onelink.me/1122185275?pid=LandingPage&c=DirectNavigation_Dec15&af_sub1=Internal&af_sub2=DirectNavigation_Product_Iris&af_sub3=Web_Originated">Get the App</a>
+			</p>
+		</div>
+	</div>
+
+	<script>
+        	var redirectUrl = 'https://go.onelink.me/1122185275?pid=LandingPage&c=DirectNavigation_Dec15&af_sub1=Internal&af_sub2=DirectNavigation_Product_Iris&af_sub3=Web_Originated';
+        	var ua = navigator.userAgent;
+        	var checker = {
+        		iphone: ua.match(/(iPhone|iPod)/i),
+        		appleTablet: ua.match(/(iPad)/i),
+    		    androidTablet: ua.match(/Android/i) && !ua.match(/Mobile/i),
+    		    android: ua.match(/Android/i) && ua.match(/Mobile/i)
+        	}
+
+            if (checker.iphone) {
+                document.body.className += " temp android iphone";
+                window.location.replace(redirectUrl);
+        		setTimeout(function(){
+                    document.body.className = " android iphone";
+        		}, 3500);
+        	} else if (checker.appleTablet || checker.androidTablet){
+        		document.body.className += " tablet";
+        	}
+    </script>
+    <script src="https://s.yimg.com/ss/rapid-3.32.js"></script>
+    <script type='text/javascript'>
+        var options = {
+                client_only: 1,
+                spaceid: '1197785024',
+                ywa: {
+                    project_id: '632911462'
+                },
+                tracked_mods: {},
+                document_name: 'MessengerLanding'
+            };
+
+        var myRapidInstance = new YAHOO.i13n.Rapid(options);
+        myRapidInstance.addModules('container', false);
+
+
+    </script>
+</body>
+
+</html>
